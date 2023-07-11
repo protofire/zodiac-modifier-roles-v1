@@ -227,6 +227,31 @@
     ],
     "infoURL": "https://www.avax.network/"
   },
+  "59140": {
+    "name": "Linea Testnet",
+    "chainId": 59140,
+    "shortName": "linea-testnet",
+    "nativeCurrency": {
+      "name": "Linea Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "explorers": [
+      {
+        "name": "blockscout",
+        "url": "https://explorer.goerli.linea.build",
+        "standard": "EIP3091",
+        "icon": "linea"
+      }
+    ],
+    "rpc": [
+      "https://rpc.goerli.linea.build",
+      "wss://rpc.goerli.linea.build",
+      "https://linea-goerli.infura.io/v3/${INFURA_API_KEY}",
+      "wss://linea-goerli.infura.io/v3/${INFURA_API_KEY}"
+    ],
+    "infoURL": "https://linea.build"
+  },
   "73799": {
     "name": "Energy Web Volta Testnet",
     "chainId": 73799,

@@ -15,6 +15,7 @@ export enum Network {
   ARBITRUM = 42161,
   AVALANCHE = 43114,
   VOLTA = 73799,
+  LINEA_GOERLI = 59140,
   AURORA = 1313161554,
 }
 
@@ -30,6 +31,7 @@ export const NETWORKS = [
   Network.AVALANCHE,
   Network.VOLTA,
   Network.AURORA,
+  Network.LINEA_GOERLI
 ]
 
 interface NetworkConfig {

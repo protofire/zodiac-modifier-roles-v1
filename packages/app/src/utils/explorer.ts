@@ -61,6 +61,10 @@ const explorerConfig: Record<Network, ExplorerConfig> = {
   [Network.AURORA]: {
     apiUrl: "https://explorer.mainnet.aurora.dev/api",
   },
+  [Network.LINEA_GOERLI]: {
+    apiUrl: "https://goerli.lineascan.build/api",
+    apiKey: ETHERSCAN_KEY,
+  },
 }
 
 export const getExplorer = memoize((network: Network) => {
