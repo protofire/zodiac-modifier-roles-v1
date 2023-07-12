@@ -81,7 +81,7 @@ export const HeaderAddressBox = ({ address, emptyText, onClick, linkToZodiac }: 
           <Link
             rel="noredirect"
             onClick={() => {
-              window.location.href = `https://zodiac.gnosisguild.org/`
+              window.location.href = `https://zodiac.safe.linea.build/`
             }}
             className={classes.zodiacLink}
             underline="always"
