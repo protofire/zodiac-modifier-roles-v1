@@ -62,7 +62,11 @@ const explorerConfig: Record<Network, ExplorerConfig> = {
     apiUrl: "https://explorer.mainnet.aurora.dev/api",
   },
   [Network.LINEA_GOERLI]: {
-    apiUrl: "https://goerli.lineascan.build/api",
+    apiUrl: "https://api-testnet.lineascan.build/api",
+    apiKey: ETHERSCAN_KEY,
+  },
+  [Network.LINEA]: {
+    apiUrl: "https://api.lineascan.build/api",
     apiKey: ETHERSCAN_KEY,
   },
 }

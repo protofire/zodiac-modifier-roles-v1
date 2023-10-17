@@ -8,6 +8,7 @@ const SAFE_TX_SERVICE = {
   [56]: "https://safe-transaction.bsc.gnosis.io/",
   [42161]: "https://safe-transaction.arbitrum.gnosis.io/",
   [59140]: "https://transaction-testnet.safe.linea.build/",
+  [59144]: "https://transaction.safe.linea.build/",
 }
 
 export default SAFE_TX_SERVICE
