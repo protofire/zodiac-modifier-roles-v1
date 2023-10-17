@@ -39,7 +39,10 @@ if (!process.env.REACT_APP_SUBGRAPH_OPTIMISM) {
   throw new Error("REACT_APP_SUBGRAPH_OPTIMISM is not set")
 }
 // if (!process.env.REACT_APP_SUBGRAPH_LINEA_GOERLI) {
-//   throw new Error("REACT_APP_SUBGRAPH_OPTIMISM is not set")
+//   throw new Error("REACT_APP_SUBGRAPH_LINEA_GOERLI is not set")
+// }
+// if (!process.env.REACT_APP_SUBGRAPH_LINEA) {
+//   throw new Error("REACT_APP_SUBGRAPH_LINEA is not set")
 // }
 // if (!process.env.REACT_APP_SUBGRAPH_OPTIMISM_ON_GNOSIS_CHAIN) {
 //   throw new Error("REACT_APP_SUBGRAPH_OPTIMISM_ON_GNOSIS_CHAIN is not set")
@@ -52,7 +55,8 @@ const SUBGRAPH_MAINNET = process.env.REACT_APP_SUBGRAPH_MAINNET
 const SUBGRAPH_POLYGON = process.env.REACT_APP_SUBGRAPH_POLYGON
 const SUBGRAPH_ARBITRUM = process.env.REACT_APP_SUBGRAPH_ARBITRUM
 const SUBGRAPH_OPTIMISM = process.env.REACT_APP_SUBGRAPH_OPTIMISM
-const SUBGRAPH_LINEA_GOERLI = process.env.REACT_APP_SUBGRAPH_LINEA_GOERLI
+// const SUBGRAPH_LINEA_GOERLI = process.env.REACT_APP_SUBGRAPH_LINEA_GOERLI
+// const SUBGRAPH_LINEA = process.env.REACT_APP_SUBGRAPH_LINEA
 // const SUBGRAPH_OPTIMISM_ON_GNOSIS_CHAIN = process.env.REACT_APP_SUBGRAPH_OPTIMISM_ON_GNOSIS_CHAIN
 
 const getUrl = (network?: Network) => {
@@ -71,6 +75,8 @@ const getUrl = (network?: Network) => {
       return BASE_SUBGRAPH_URL + SUBGRAPH_ARBITRUM
     // case Network.LINEA_GOERLI:
     //   return BASE_SUBGRAPH_URL + SUBGRAPH_LINEA_GOERLI
+    // case Network.LINEA:
+    //   return BASE_SUBGRAPH_URL + SUBGRAPH_LINEA
     // case Network.OPTIMISM_ON_GNOSIS:
     //   return BASE_SUBGRAPH_URL + SUBGRAPH_OPTIMISM_ON_GNOSIS_CHAIN
     default:
