@@ -5,7 +5,7 @@ dataSources:
   - kind: ethereum
     name: Roles
     # prettier-ignore
-    network: linea
+    network: linea-mainnet
     source:
       abi: Roles
       # prettier-ignore
@@ -51,7 +51,7 @@ dataSources:
   - kind: ethereum
     name: Permissions
     # prettier-ignore
-    network: linea
+    network: linea-mainnet
     source:
       abi: Permissions
       # prettier-ignore
