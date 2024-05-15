@@ -1,8 +1,5 @@
 import CHAINS from "../data/chains.json"
 
-const INFURA_KEY = process.env.REACT_APP_INFURA_KEY as string
-if (!INFURA_KEY) throw new Error("INFURA KEY NOT SET")
-
 export enum Network {
   MAINNET = 1,
   GOERLI = 5,
@@ -52,11 +49,29 @@ interface NetworkConfig {
   }[]
 }
 
+const INFURA_KEY = process.env.REACT_APP_INFURA_KEY
+export const NETWORK_INFURA_ID: Record<Network, string | undefined> = {
+  [Network.MAINNET]: INFURA_KEY,
+  [Network.GOERLI]: INFURA_KEY,
+  [Network.SEPOLIA]: INFURA_KEY,
+  [Network.OPTIMISM]: INFURA_KEY,
+  [Network.BINANCE]: INFURA_KEY,
+  [Network.GNOSIS]: INFURA_KEY,
+  [Network.POLYGON]: INFURA_KEY,
+  [Network.EWT]: INFURA_KEY,
+  [Network.ARBITRUM]: INFURA_KEY,
+  [Network.AVALANCHE]: INFURA_KEY,
+  [Network.VOLTA]: INFURA_KEY,
+  [Network.AURORA]: INFURA_KEY,
+  [Network.OPTIMISM_ON_GNOSIS]: INFURA_KEY,
+}
+
 export function getNetworkRPC(network: Network) {
   const config = getNetwork(network)
-  if (config) {
+  const infura = NETWORK_INFURA_ID[network]
+  if (config && infura) {
     // eslint-disable-next-line no-template-curly-in-string
-    return config.rpc[0].replace("${INFURA_API_KEY}", INFURA_KEY)
+    return config.rpc[0].replace("${INFURA_API_KEY}", infura)
   }
 }
 
