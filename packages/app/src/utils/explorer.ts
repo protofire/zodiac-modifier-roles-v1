@@ -60,6 +60,14 @@ const explorerConfig: Record<Network, ExplorerConfig> = {
   [Network.AURORA]: {
     apiUrl: "https://explorer.mainnet.aurora.dev/api",
   },
+  [Network.LINEA_GOERLI]: {
+    apiUrl: "https://api-testnet.lineascan.build/api",
+    apiKey: process.env.REACT_APP_LINEASCAN_KEY ?? "",
+  },
+  [Network.LINEA]: {
+    apiUrl: "https://api.lineascan.build/api",
+    apiKey: process.env.REACT_APP_LINEASCAN_KEY ?? "",
+  },
 }
 
 export const getExplorer = memoize((network: Network) => {
