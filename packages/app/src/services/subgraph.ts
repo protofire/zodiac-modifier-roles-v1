@@ -31,6 +31,10 @@ const getUrl = (network?: Network) => {
       return "https://api.thegraph.com/samepant/zodiac-roles-mod-optimism"
     case Network.ARBITRUM:
       return "https://api.thegraph.com/samepant/zodiac-roles-mod-arbitrum"
+    case Network.LINEA:
+      return "https://graph-query.linea.build/subgraphs/name/linea-safe/zodiac-roles-mod-linea-mainnet"
+    case Network.LINEA_GOERLI:
+      return "https://graph-query.goerli.linea.build/subgraphs/name/linea-safe/zodiac-roles-mod-linea-goerli"
     default:
       return "https://api.thegraph.com/samepant/zodiac-roles-mod-mainnet"
   }
