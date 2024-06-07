@@ -14,6 +14,6 @@ export const NETWORK_ZODIAC_URL: Record<Network, string | undefined> = {
   [Network.VOLTA]: "https://zodiac.gnosisguild.org/",
   [Network.AURORA]: "https://zodiac.gnosisguild.org/",
   [Network.OPTIMISM_ON_GNOSIS]: "https://zodiac.gnosisguild.org/",
-  [Network.LINEA_GOERLI]: "https://stg-zodiac.safe.protofire.io/",
-  [Network.LINEA]: "https://stg-zodiac.safe.protofire.io/",
+  [Network.LINEA_GOERLI]: "https://zodiac.safe.protofire.io/",
+  [Network.LINEA]: "https://zodiac.safe.protofire.io/",
 }
