@@ -16,7 +16,7 @@ export enum Network {
   AURORA = 1313161554,
   LINEA_GOERLI = 59140,
   LINEA = 59144,
-  PlasmaTestnet = 9746
+  PlasmaTestnet = 9746,
 }
 
 export const NETWORKS = [
