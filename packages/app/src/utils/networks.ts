@@ -16,6 +16,7 @@ export enum Network {
   AURORA = 1313161554,
   LINEA_GOERLI = 59140,
   LINEA = 59144,
+  PlasmaTestnet = 9746
 }
 
 export const NETWORKS = [
@@ -33,6 +34,7 @@ export const NETWORKS = [
   Network.AURORA,
   Network.LINEA_GOERLI,
   Network.LINEA,
+  Network.PlasmaTestnet,
 ]
 
 interface NetworkConfig {
@@ -70,6 +72,7 @@ export const NETWORK_INFURA_ID: Record<Network, string | undefined> = {
   [Network.OPTIMISM_ON_GNOSIS]: INFURA_KEY,
   [Network.LINEA_GOERLI]: INFURA_KEY,
   [Network.LINEA]: INFURA_KEY,
+  [Network.PlasmaTestnet]: INFURA_KEY,
 }
 
 export function getNetworkRPC(network: Network) {

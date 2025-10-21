@@ -68,6 +68,9 @@ const explorerConfig: Record<Network, ExplorerConfig> = {
     apiUrl: "https://api.lineascan.build/api",
     apiKey: process.env.REACT_APP_LINEASCAN_KEY ?? "",
   },
+  [Network.PlasmaTestnet]: {
+    apiUrl: "https://testnet.plasmascan.to/api",
+  },
 }
 
 export const getExplorer = memoize((network: Network) => {
