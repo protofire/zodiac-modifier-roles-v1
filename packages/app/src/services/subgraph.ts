@@ -35,6 +35,8 @@ const getUrl = (network?: Network) => {
       return "https://graph-query.linea.build/subgraphs/name/linea-safe/zodiac-roles-mod-linea-mainnet"
     case Network.LINEA_GOERLI:
       return "https://graph-query.goerli.linea.build/subgraphs/name/linea-safe/zodiac-roles-mod-linea-goerli"
+    case Network.PlasmaTestnet:
+      return "https://api.goldsky.com/api/public/project_cmgzb1df72grg01qg1rg138zk/subgraphs/zodiac-roles-plasma/1.0.0/gn"
     default:
       return "https://api.thegraph.com/samepant/zodiac-roles-mod-mainnet"
   }
