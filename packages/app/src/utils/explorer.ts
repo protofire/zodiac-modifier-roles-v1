@@ -68,8 +68,11 @@ const explorerConfig: Record<Network, ExplorerConfig> = {
     apiUrl: "https://api.lineascan.build/api",
     apiKey: process.env.REACT_APP_LINEASCAN_KEY ?? "",
   },
-  [Network.PlasmaTestnet]: {
-    apiUrl: "https://testnet.plasmascan.to/api",
+  [Network.PLASMA_TESNET]: {
+    apiUrl: "https://api.routescan.io/v2/network/testnet/evm/9746_5/etherscan/api",
+  },
+  [Network.PLASMA]: {
+    apiUrl: "https://api.routescan.io/v2/network/mainnet/evm/9745/etherscan/api",
   },
 }
 

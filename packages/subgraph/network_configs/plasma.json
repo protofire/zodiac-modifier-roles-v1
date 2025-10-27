@@ -1,4 +1,4 @@
 {
-    "network": "plasma",
-    "startBlock": 5160881
+    "network": "plasma-mainnet",
+    "startBlock": 4636154
 }
