@@ -186,6 +186,8 @@
   "9001": "evmos",
   "9100": "GENEC",
   "9527": "trpg",
+  "9745": "plasma",
+  "9746": "plasma-testnet",
   "9999": "myn",
   "10000": "smartbch",
   "10001": "smartbchtest",

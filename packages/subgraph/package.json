@@ -31,7 +31,8 @@
     "prepare:optimism-on-gnosis-chain": "mustache network_configs/optimism-on-gnosis-chain.json subgraph.template.yaml > subgraph.yaml",
     "prepare:arbitrum-one": "mustache network_configs/arbitrum-one.json subgraph.template.yaml > subgraph.yaml",
     "prepare:gnosis-chain": "mustache network_configs/gnosis-chain.json subgraph.template.yaml > subgraph.yaml",
-    "prepare:plasma": "mustache network_configs/plasma.json subgraph.template.yaml > subgraph.yaml"
+    "prepare:plasma": "mustache network_configs/plasma.json subgraph.template.yaml > subgraph.yaml",
+    "prepare:plasma-testnet": "mustache network_configs/plasma-testnet.json subgraph.template.yaml > subgraph.yaml"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "^0.56.0",
