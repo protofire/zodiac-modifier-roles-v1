@@ -18,4 +18,6 @@ export const NETWORK_ZODIAC_URL: Record<Network, string | undefined> = {
   [Network.LINEA]: "https://stg-zodiac.safe.protofire.io/",
   [Network.PLASMA_TESNET]: "https://stg-zodiac.safe.protofire.io/",
   [Network.PLASMA]: "https://stg-zodiac.safe.protofire.io/",
+  [Network.ZETACHAIN_TESTNET]: "https://stg-zodiac.safe.protofire.io/",
+  [Network.ZETACHAIN]: "https://stg-zodiac.safe.protofire.io/",
 }

@@ -74,6 +74,12 @@ const explorerConfig: Record<Network, ExplorerConfig> = {
   [Network.PLASMA]: {
     apiUrl: "https://api.routescan.io/v2/network/mainnet/evm/9745/etherscan/api",
   },
+  [Network.ZETACHAIN_TESTNET]: {
+    apiUrl: "https://testnet.zetascan.com/api",
+  },
+  [Network.ZETACHAIN]: {
+    apiUrl: "https://zetascan.com/api",
+  },
 }
 
 export const getExplorer = memoize((network: Network) => {
