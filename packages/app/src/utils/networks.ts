@@ -18,6 +18,8 @@ export enum Network {
   LINEA = 59144,
   PLASMA = 9745,
   PLASMA_TESNET = 9746,
+  ZETACHAIN_TESTNET = 7001,
+  ZETACHAIN = 7000,
 }
 
 export const NETWORKS = [
@@ -37,6 +39,8 @@ export const NETWORKS = [
   Network.LINEA,
   Network.PLASMA_TESNET,
   Network.PLASMA,
+  Network.ZETACHAIN_TESTNET,
+  Network.ZETACHAIN,
 ]
 
 interface NetworkConfig {
@@ -76,6 +80,8 @@ export const NETWORK_INFURA_ID: Record<Network, string | undefined> = {
   [Network.LINEA]: INFURA_KEY,
   [Network.PLASMA_TESNET]: INFURA_KEY,
   [Network.PLASMA]: INFURA_KEY,
+  [Network.ZETACHAIN_TESTNET]: INFURA_KEY,
+  [Network.ZETACHAIN]: INFURA_KEY,
 }
 
 export function getNetworkRPC(network: Network) {

@@ -39,6 +39,10 @@ const getUrl = (network?: Network) => {
       return "https://api.goldsky.com/api/public/project_cmgzb1df72grg01qg1rg138zk/subgraphs/zodiac-roles-plasma-testnet/1.0.0/gn"
     case Network.PLASMA:
       return "https://api.goldsky.com/api/public/project_cmgzb1df72grg01qg1rg138zk/subgraphs/zodiac-roles-plasma-mainnet/1.0.0/gn"
+    case Network.ZETACHAIN_TESTNET:
+      return "https://api.goldsky.com/api/public/project_cmgzb1df72grg01qg1rg138zk/subgraphs/zodiac-roles-zetachain-testnet/1.0.0/gn"
+    case Network.ZETACHAIN:
+      return "https://api.studio.thegraph.com/query/1713730/zodiac-roles-zetachain/v1.0.0"
     default:
       return "https://api.thegraph.com/samepant/zodiac-roles-mod-mainnet"
   }
