@@ -297,6 +297,50 @@
     ],
     "infoURL": "https://www.plasma.to/"
   },
+  "747": {
+    "name": "Flow EVM Mainnet",
+    "chainId": 747,
+    "shortName": "flow-mainnet",
+    "nativeCurrency": {
+      "name": "FLOW",
+      "symbol": "FLOW",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://mainnet.evm.nodes.onflow.org",
+      "https://flow-mainnet.gateway.tatum.io"
+    ],
+    "explorers": [
+      {
+        "name": "FlowScan",
+        "url": "https://evm.flowscan.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://developers.flow.com/evm/about"
+  },
+  "545": {
+    "name": "Flow EVM Testnet",
+    "chainId": 545,
+    "shortName": "flow-testnet",
+    "nativeCurrency": {
+      "name": "FLOW",
+      "symbol": "FLOW",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://testnet.evm.nodes.onflow.org",
+      "https://flow-testnet.gateway.tatum.io"
+    ],
+    "explorers": [
+      {
+        "name": "FlowScan Testnet",
+        "url": "https://evm-testnet.flowscan.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://developers.flow.com/evm/about"
+  },
   "42161": {
     "name": "Arbitrum One",
     "chainId": 42161,

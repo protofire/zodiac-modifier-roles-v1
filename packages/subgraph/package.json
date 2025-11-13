@@ -34,7 +34,9 @@
     "prepare:plasma": "mustache network_configs/plasma.json subgraph.template.yaml > subgraph.yaml",
     "prepare:plasma-testnet": "mustache network_configs/plasma-testnet.json subgraph.template.yaml > subgraph.yaml",
     "prepare:zetachain": "mustache network_configs/zetachain.json subgraph.template.yaml > subgraph.yaml",
-    "prepare:zetachain-testnet": "mustache network_configs/zetachain-testnet.json subgraph.template.yaml > subgraph.yaml"
+    "prepare:zetachain-testnet": "mustache network_configs/zetachain-testnet.json subgraph.template.yaml > subgraph.yaml",
+    "prepare:flow-mainnet": "mustache network_configs/flow-mainnet.json subgraph.template.yaml > subgraph.yaml",
+    "prepare:flow-testnet": "mustache network_configs/flow-testnet.json subgraph.template.yaml > subgraph.yaml"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "^0.56.0",

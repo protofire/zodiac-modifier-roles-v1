@@ -80,6 +80,12 @@ const explorerConfig: Record<Network, ExplorerConfig> = {
   [Network.ZETACHAIN]: {
     apiUrl: "https://zetascan.com/api",
   },
+  [Network.FLOW_EVM_MAINNET]: {
+    apiUrl: "https://evm.flowscan.io/api",
+  },
+  [Network.FLOW_EVM_TESTNET]: {
+    apiUrl: "https://evm-testnet.flowscan.io/api",
+  },
 }
 
 export const getExplorer = memoize((network: Network) => {

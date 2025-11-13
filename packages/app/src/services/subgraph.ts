@@ -43,6 +43,10 @@ const getUrl = (network?: Network) => {
       return "https://api.goldsky.com/api/public/project_cmgzb1df72grg01qg1rg138zk/subgraphs/zodiac-roles-zetachain-testnet/1.0.0/gn"
     case Network.ZETACHAIN:
       return "https://api.studio.thegraph.com/query/1713730/zodiac-roles-zetachain/v1.0.0"
+    case Network.FLOW_EVM_MAINNET:
+      return "https://api.goldsky.com/api/public/project_cltg8htcp35aw01xn43dqhxmv/subgraphs/zodiac-modifier-roles-on-flow-evm-mainnet/1.0.0/gn"
+    case Network.FLOW_EVM_TESTNET:
+      return "https://api.goldsky.com/api/public/project_cltg8htcp35aw01xn43dqhxmv/subgraphs/zodiac-modifier-roles-on-flow-evm-testnet/1.0.0/gn"
     default:
       return "https://api.thegraph.com/samepant/zodiac-roles-mod-mainnet"
   }
