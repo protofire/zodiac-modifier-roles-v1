@@ -11,14 +11,6 @@ const BSCSCAN_KEY = process.env.REACT_APP_BSCSCAN_KEY as string
 const OPTIMISTICSCAN_KEY = process.env.REACT_APP_OPTIMISTICSCAN_KEY as string
 const SNOWTRACE_KEY = process.env.REACT_APP_SNOWTRACE_KEY as string
 
-if (!ETHERSCAN_KEY) throw new Error("ETHERSCAN_KEY env is not set")
-if (!GNOSISSCAN_KEY) throw new Error("GNOSISSCAN_KEY env is not set")
-if (!POLYGONSCAN_KEY) throw new Error("POLYGONSCAN_KEY env is not set")
-if (!ARBISCAN_KEY) throw new Error("ARBISCAN_KEY env is not set")
-if (!BSCSCAN_KEY) throw new Error("BSCSCAN_KEY env is not set")
-if (!OPTIMISTICSCAN_KEY) throw new Error("OPTIMISTICSCAN_KEY env is not set")
-if (!SNOWTRACE_KEY) throw new Error("SNOWTRACE_KEY env is not set")
-
 const explorerConfig: Record<Network, ExplorerConfig> = {
   [Network.MAINNET]: {
     apiUrl: "https://api.etherscan.io/api",
@@ -67,6 +59,32 @@ const explorerConfig: Record<Network, ExplorerConfig> = {
   },
   [Network.AURORA]: {
     apiUrl: "https://explorer.mainnet.aurora.dev/api",
+  },
+  [Network.LINEA_GOERLI]: {
+    apiUrl: "https://api-testnet.lineascan.build/api",
+    apiKey: process.env.REACT_APP_LINEASCAN_KEY ?? "",
+  },
+  [Network.LINEA]: {
+    apiUrl: "https://api.lineascan.build/api",
+    apiKey: process.env.REACT_APP_LINEASCAN_KEY ?? "",
+  },
+  [Network.PLASMA_TESNET]: {
+    apiUrl: "https://api.routescan.io/v2/network/testnet/evm/9746_5/etherscan/api",
+  },
+  [Network.PLASMA]: {
+    apiUrl: "https://api.routescan.io/v2/network/mainnet/evm/9745/etherscan/api",
+  },
+  [Network.ZETACHAIN_TESTNET]: {
+    apiUrl: "https://testnet.zetascan.com/api",
+  },
+  [Network.ZETACHAIN]: {
+    apiUrl: "https://zetascan.com/api",
+  },
+  [Network.FLOW_EVM_MAINNET]: {
+    apiUrl: "https://evm.flowscan.io/api",
+  },
+  [Network.FLOW_EVM_TESTNET]: {
+    apiUrl: "https://evm-testnet.flowscan.io/api",
   },
 }
 

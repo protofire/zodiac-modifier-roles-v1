@@ -17,58 +17,38 @@ import { Network } from "../utils/networks"
 
 let client
 
-if (!process.env.REACT_APP_SUBGRAPH_BASE_URL) {
-  throw new Error("REACT_APP_SUBGRAPH_BASE_URL is not set")
-}
-if (!process.env.REACT_APP_SUBGRAPH_GNOSIS_CHAIN) {
-  throw new Error("REACT_APP_SUBGRAPH_GNOSIS_CHAIN is not set")
-}
-if (!process.env.REACT_APP_SUBGRAPH_MAINNET) {
-  throw new Error("REACT_APP_SUBGRAPH_MAINNET is not set")
-}
-if (!process.env.REACT_APP_SUBGRAPH_GOERLI) {
-  throw new Error("REACT_APP_SUBGRAPH_GOERLI is not set")
-}
-if (!process.env.REACT_APP_SUBGRAPH_POLYGON) {
-  throw new Error("REACT_APP_SUBGRAPH_POLYGON is not set")
-}
-if (!process.env.REACT_APP_SUBGRAPH_ARBITRUM) {
-  throw new Error("REACT_APP_SUBGRAPH_ARBITRUM is not set")
-}
-if (!process.env.REACT_APP_SUBGRAPH_OPTIMISM) {
-  throw new Error("REACT_APP_SUBGRAPH_OPTIMISM is not set")
-}
-// if (!process.env.REACT_APP_SUBGRAPH_OPTIMISM_ON_GNOSIS_CHAIN) {
-//   throw new Error("REACT_APP_SUBGRAPH_OPTIMISM_ON_GNOSIS_CHAIN is not set")
-// }
-
-const BASE_SUBGRAPH_URL = process.env.REACT_APP_SUBGRAPH_BASE_URL
-const SUBGRAPH_GNOSIS_CHAIN = process.env.REACT_APP_SUBGRAPH_GNOSIS_CHAIN
-const SUBGRAPH_GOERLI = process.env.REACT_APP_SUBGRAPH_GOERLI
-const SUBGRAPH_MAINNET = process.env.REACT_APP_SUBGRAPH_MAINNET
-const SUBGRAPH_POLYGON = process.env.REACT_APP_SUBGRAPH_POLYGON
-const SUBGRAPH_ARBITRUM = process.env.REACT_APP_SUBGRAPH_ARBITRUM
-const SUBGRAPH_OPTIMISM = process.env.REACT_APP_SUBGRAPH_OPTIMISM
-// const SUBGRAPH_OPTIMISM_ON_GNOSIS_CHAIN = process.env.REACT_APP_SUBGRAPH_OPTIMISM_ON_GNOSIS_CHAIN
-
 const getUrl = (network?: Network) => {
   switch (network) {
     case Network.MAINNET:
-      return BASE_SUBGRAPH_URL + SUBGRAPH_MAINNET
+      return "https://api.thegraph.com/samepant/zodiac-roles-mod-mainnet"
     case Network.GNOSIS:
-      return BASE_SUBGRAPH_URL + SUBGRAPH_GNOSIS_CHAIN
+      return "https://api.thegraph.com/samepant/zodiac-roles-mod-gnosis"
     case Network.GOERLI:
-      return BASE_SUBGRAPH_URL + SUBGRAPH_GOERLI
+      return "https://api.thegraph.com/samepant/zodiac-roles-mod-goerli"
     case Network.POLYGON:
-      return BASE_SUBGRAPH_URL + SUBGRAPH_POLYGON
+      return "https://api.thegraph.com/samepant/zodiac-roles-mod-polygon"
     case Network.OPTIMISM:
-      return BASE_SUBGRAPH_URL + SUBGRAPH_OPTIMISM
+      return "https://api.thegraph.com/samepant/zodiac-roles-mod-optimism"
     case Network.ARBITRUM:
-      return BASE_SUBGRAPH_URL + SUBGRAPH_ARBITRUM
-    // case Network.OPTIMISM_ON_GNOSIS:
-    //   return BASE_SUBGRAPH_URL + SUBGRAPH_OPTIMISM_ON_GNOSIS_CHAIN
+      return "https://api.thegraph.com/samepant/zodiac-roles-mod-arbitrum"
+    case Network.LINEA:
+      return "https://graph-query.linea.build/subgraphs/name/linea-safe/zodiac-roles-mod-linea-mainnet"
+    case Network.LINEA_GOERLI:
+      return "https://graph-query.goerli.linea.build/subgraphs/name/linea-safe/zodiac-roles-mod-linea-goerli"
+    case Network.PLASMA_TESNET:
+      return "https://api.goldsky.com/api/public/project_cmgzb1df72grg01qg1rg138zk/subgraphs/zodiac-roles-plasma-testnet/1.0.0/gn"
+    case Network.PLASMA:
+      return "https://api.goldsky.com/api/public/project_cmgzb1df72grg01qg1rg138zk/subgraphs/zodiac-roles-plasma-mainnet/1.0.0/gn"
+    case Network.ZETACHAIN_TESTNET:
+      return "https://api.goldsky.com/api/public/project_cmgzb1df72grg01qg1rg138zk/subgraphs/zodiac-roles-zetachain-testnet/1.0.0/gn"
+    case Network.ZETACHAIN:
+      return "https://api.studio.thegraph.com/query/1713730/zodiac-roles-zetachain/v1.0.0"
+    case Network.FLOW_EVM_MAINNET:
+      return "https://api.goldsky.com/api/public/project_cltg8htcp35aw01xn43dqhxmv/subgraphs/zodiac-modifier-roles-on-flow-evm-mainnet/1.0.0/gn"
+    case Network.FLOW_EVM_TESTNET:
+      return "https://api.goldsky.com/api/public/project_cltg8htcp35aw01xn43dqhxmv/subgraphs/zodiac-modifier-roles-on-flow-evm-testnet/1.0.0/gn"
     default:
-      return BASE_SUBGRAPH_URL + SUBGRAPH_GOERLI
+      return "https://api.thegraph.com/samepant/zodiac-roles-mod-mainnet"
   }
 }
 

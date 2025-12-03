@@ -209,6 +209,138 @@
     ],
     "infoURL": "https://www.gnosischain.com/"
   },
+  "7000": {
+    "name": "ZetaChain",
+    "chainId": 7000,
+    "shortName": "zetachain-mainnet",
+    "nativeCurrency": {
+      "name": "ZETA",
+      "symbol": "ZETA",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://zetachain-evm.blockpi.network/v1/rpc/public",
+      "https://zetachain-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}"
+    ],
+    "explorers": [
+      {
+        "name": "blockscout",
+        "url": "https://zetascan.com",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://zetachain.com"
+  },
+  "7001": {
+    "name": "ZetaChain Testnet",
+    "chainId": 7001,
+    "shortName": "zetachain-testnet",
+    "nativeCurrency": {
+      "name": "ZETA",
+      "symbol": "ZETA",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://zetachain-athens-evm.blockpi.network/v1/rpc/public",
+      "https://zetachain-testnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}"
+    ],
+    "explorers": [
+      {
+        "name": "blockscout",
+        "url": "https://testnet.zetascan.com",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://zetachain.com"
+  },
+  "9745": {
+    "name": "Plasma",
+    "chainId": 9745,
+    "shortName": "plasma",
+    "nativeCurrency": {
+      "name": "XPL",
+      "symbol": "XPL",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://plasma-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}",
+      "https://rpc.plasma.to"
+    ],
+    "explorers": [
+      {
+        "name": "Plasmascan",
+        "url": "https://plasmascan.to/",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://www.plasma.to/"
+  },
+  "9746": {
+    "name": "Plasma Testnet",
+    "chainId": 9746,
+    "shortName": "plasma-testnet",
+    "nativeCurrency": {
+      "name": "XPL",
+      "symbol": "XPL",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://plasma-testnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}",
+      "https://testnet-rpc.plasma.to"
+    ],
+    "explorers": [
+      {
+        "name": "Plasmascan",
+        "url": "https://testnet.plasmascan.to",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://www.plasma.to/"
+  },
+  "747": {
+    "name": "Flow EVM Mainnet",
+    "chainId": 747,
+    "shortName": "flow-mainnet",
+    "nativeCurrency": {
+      "name": "FLOW",
+      "symbol": "FLOW",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://mainnet.evm.nodes.onflow.org",
+      "https://flow-mainnet.gateway.tatum.io"
+    ],
+    "explorers": [
+      {
+        "name": "FlowScan",
+        "url": "https://evm.flowscan.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://developers.flow.com/evm/about"
+  },
+  "545": {
+    "name": "Flow EVM Testnet",
+    "chainId": 545,
+    "shortName": "flow-testnet",
+    "nativeCurrency": {
+      "name": "FLOW",
+      "symbol": "FLOW",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://testnet.evm.nodes.onflow.org",
+      "https://flow-testnet.gateway.tatum.io"
+    ],
+    "explorers": [
+      {
+        "name": "FlowScan Testnet",
+        "url": "https://evm-testnet.flowscan.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://developers.flow.com/evm/about"
+  },
   "42161": {
     "name": "Arbitrum One",
     "chainId": 42161,
@@ -258,6 +390,64 @@
       }
     ],
     "infoURL": "https://www.avax.network/"
+  },
+  "59140": {
+    "name": "Linea Testnet",
+    "chainId": 59140,
+    "shortName": "linea-testnet",
+    "nativeCurrency": {
+      "name": "Linea Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "explorers": [
+      {
+        "name": "Etherscan",
+        "url": "https://goerli.lineascan.build",
+        "standard": "EIP3091"
+      },
+      {
+        "name": "Blockscout",
+        "url": "https://explorer.goerli.linea.build",
+        "standard": "EIP3091"
+      }
+    ],
+    "rpc": [
+      "https://rpc.goerli.linea.build",
+      "wss://rpc.goerli.linea.build",
+      "https://linea-goerli.infura.io/v3/${INFURA_API_KEY}",
+      "wss://linea-goerli.infura.io/v3/${INFURA_API_KEY}"
+    ],
+    "infoURL": "https://linea.build"
+  },
+  "59144": {
+    "name": "Linea",
+    "chainId": 59144,
+    "shortName": "linea",
+    "nativeCurrency": {
+      "name": "Linea Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "explorers": [
+      {
+        "name": "Etherscan",
+        "url": "https://lineascan.build",
+        "standard": "EIP3091"
+      },
+      {
+        "name": "Blockscout",
+        "url": "https://explorer.linea.build",
+        "standard": "EIP3091"
+      }
+    ],
+    "rpc": [
+      "https://rpc.linea.build",
+      "wss://rpc.linea.build",
+      "https://linea-mainnet.infura.io/v3/${INFURA_API_KEY}",
+      "wss://linea-mainnet.infura.io/ws/v3/${INFURA_API_KEY}"
+    ],
+    "infoURL": "https://linea.build"
   },
   "73799": {
     "name": "Energy Web Volta Testnet",
