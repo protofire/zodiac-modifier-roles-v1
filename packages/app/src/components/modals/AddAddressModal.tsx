@@ -50,7 +50,7 @@ const AddAddressModal = ({ type, onAddAddress, onClose, isOpen }: Props): React.
       <Box sx={{ mt: 1 }}>
         <Typography variant="body1">Members are accounts that that the role is assigned to.</Typography>
         <Link
-          href="https://gnosis.github.io/zodiac/docs/tutorial-modifier-roles/add-role#members"
+          href="https://www.zodiac.wiki/documentation/roles-modifier/roles-modifier-operator-tutorial#add-a-member"
           target="_blank"
           rel="noredirect"
           underline="always"

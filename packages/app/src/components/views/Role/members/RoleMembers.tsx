@@ -27,7 +27,7 @@ export const RoleMembers = () => {
       <MenuEntity
         list={members}
         name={{ singular: "Member", plural: "Members" }}
-        tutorialLink="https://gnosis.github.io/zodiac/docs/tutorial-modifier-roles/add-role#members"
+        tutorialLink="https://www.zodiac.wiki/documentation/roles-modifier/roles-modifier-operator-tutorial#add-a-member"
         onAdd={() => setAddMemberModalIsOpen(true)}
         renderItem={(member) => (
           <RoleMember

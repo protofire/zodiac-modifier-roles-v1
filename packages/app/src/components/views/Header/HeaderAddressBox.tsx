@@ -1,6 +1,6 @@
 import { HeaderBox } from "./HeaderBox"
-import { Box, Link, makeStyles, Typography } from "@material-ui/core"
-import { ArrowForward } from "@material-ui/icons"
+import { Box, makeStyles, Typography } from "@material-ui/core"
+// import { ArrowForward } from "@material-ui/icons"
 import { EthHashInfo } from "@gnosis.pm/safe-react-components"
 import { truncateEthAddress } from "../../../utils/address"
 import classNames from "classnames"
@@ -51,7 +51,7 @@ interface HeaderAddressBoxProps {
   linkToZodiac?: boolean
 }
 
-export const HeaderAddressBox = ({ address, emptyText, onClick, linkToZodiac }: HeaderAddressBoxProps) => {
+export const HeaderAddressBox = ({ address, emptyText, onClick }: HeaderAddressBoxProps) => {
   const classes = useStyles()
 
   return (
@@ -77,7 +77,7 @@ export const HeaderAddressBox = ({ address, emptyText, onClick, linkToZodiac }: 
         >
           {address ? truncateEthAddress(address) : emptyText}
         </Typography>
-        {address && linkToZodiac && (
+        {/* {address && linkToZodiac && (
           <Link
             rel="noredirect"
             onClick={() => {
@@ -90,7 +90,7 @@ export const HeaderAddressBox = ({ address, emptyText, onClick, linkToZodiac }: 
             Open Zodiac
             <ArrowForward className={classes.zodiacArrow} />
           </Link>
-        )}
+        )}*/}
       </Box>
     </HeaderBox>
   )
