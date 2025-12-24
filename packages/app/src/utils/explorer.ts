@@ -86,6 +86,12 @@ const explorerConfig: Record<Network, ExplorerConfig> = {
   [Network.FLOW_EVM_TESTNET]: {
     apiUrl: "https://evm-testnet.flowscan.io/api",
   },
+  [Network.SHAPE]: {
+    apiUrl: "https://shapescan.xyz/api",
+  },
+  [Network.SHAPE_TESTNET]: {
+    apiUrl: "https://explorer-sepolia.shape.network/api",
+  },
 }
 
 export const getExplorer = memoize((network: Network) => {
