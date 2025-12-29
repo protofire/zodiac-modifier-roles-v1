@@ -22,6 +22,8 @@ export enum Network {
   ZETACHAIN = 7000,
   FLOW_EVM_MAINNET = 747,
   FLOW_EVM_TESTNET = 545,
+  SHAPE = 360,
+  SHAPE_TESTNET = 11011,
 }
 
 export const NETWORKS = [
@@ -45,6 +47,8 @@ export const NETWORKS = [
   Network.ZETACHAIN,
   Network.FLOW_EVM_MAINNET,
   Network.FLOW_EVM_TESTNET,
+  Network.SHAPE,
+  Network.SHAPE_TESTNET,
 ]
 
 interface NetworkConfig {
@@ -88,6 +92,8 @@ export const NETWORK_INFURA_ID: Record<Network, string | undefined> = {
   [Network.ZETACHAIN]: INFURA_KEY,
   [Network.FLOW_EVM_MAINNET]: undefined, // network is not supported by Infura
   [Network.FLOW_EVM_TESTNET]: undefined, // network is not supported by Infura
+  [Network.SHAPE]: undefined, // network is not supported by Infura
+  [Network.SHAPE_TESTNET]: undefined, // network is not supported by Infura
 }
 
 export function getNetworkRPC(network: Network) {
