@@ -42,7 +42,7 @@ const getUrl = (network?: Network) => {
     case Network.ZETACHAIN_TESTNET:
       return "https://api.goldsky.com/api/public/project_cmgzb1df72grg01qg1rg138zk/subgraphs/zodiac-roles-zetachain-testnet/1.0.0/gn"
     case Network.ZETACHAIN:
-      return "https://api.studio.thegraph.com/query/1713730/zodiac-roles-zetachain/v1.0.0"
+      return "https://graph-json-rpc.swap.w3us.site:8000/subgraphs/name/zodiac-modifier-roles-zetachain"
     case Network.FLOW_EVM_MAINNET:
       return "https://graph-json-rpc.swap.w3us.site:8000/subgraphs/name/zodiac-modifier-roles-on-flow-evm-mainnet"
     case Network.FLOW_EVM_TESTNET:
