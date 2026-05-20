@@ -38,7 +38,7 @@ const getUrl = (network?: Network) => {
     case Network.PLASMA_TESNET:
       return "https://api.goldsky.com/api/public/project_cmgzb1df72grg01qg1rg138zk/subgraphs/zodiac-roles-plasma-testnet/1.0.0/gn"
     case Network.PLASMA:
-      return "https://api.goldsky.com/api/public/project_cmgzb1df72grg01qg1rg138zk/subgraphs/zodiac-roles-plasma-mainnet/1.0.0/gn"
+      return "https://graph-json-rpc.swap.w3us.site:8000/subgraphs/name/zodiac-modifier-roles-plasma"
     case Network.ZETACHAIN_TESTNET:
       return "https://api.goldsky.com/api/public/project_cmgzb1df72grg01qg1rg138zk/subgraphs/zodiac-roles-zetachain-testnet/1.0.0/gn"
     case Network.ZETACHAIN:
