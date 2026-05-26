@@ -36,7 +36,7 @@ const getUrl = (network?: Network) => {
     case Network.LINEA_GOERLI:
       return "https://graph-query.goerli.linea.build/subgraphs/name/linea-safe/zodiac-roles-mod-linea-goerli"
     case Network.PLASMA_TESNET:
-      return "https://api.goldsky.com/api/public/project_cltg8htcp35aw01xn43dqhxmv/subgraphs/zodiac-modifier-roles-plasma/v1.0.0/gn"
+      return "https://api.goldsky.com/api/public/project_cltg8htcp35aw01xn43dqhxmv/subgraphs/zodiac-modifier-roles-plasma-testnet/v1.0.0/gn"
     case Network.PLASMA:
       return "https://graph-json-rpc.swap.w3us.site:8000/subgraphs/name/zodiac-modifier-roles-plasma"
     case Network.ZETACHAIN_TESTNET:
@@ -48,9 +48,9 @@ const getUrl = (network?: Network) => {
     case Network.FLOW_EVM_TESTNET:
       return "https://api.goldsky.com/api/public/project_cltg8htcp35aw01xn43dqhxmv/subgraphs/zodiac-modifier-roles-on-flow-evm-testnet/1.0.0/gn"
     case Network.SHAPE:
-      return "https://api.goldsky.com/api/public/project_cmh1y1e9087om01yi8eddakcn/subgraphs/zodiac-modifier-roles-v1-shape/1.0.0/gn"
+      return "https://graph-json-rpc.swap.w3us.site:8000/subgraphs/name/zodiac-modifier-roles-shape"
     case Network.SHAPE_TESTNET:
-      return "https://api.goldsky.com/api/public/project_cmh1y1e9087om01yi8eddakcn/subgraphs/zodiac-modifier-roles-v1-shape-testnet/1.0.0/gn"
+      return "https://graph-json-rpc.swap.w3us.site:8000/subgraphs/name/zodiac-modifier-roles-shape-testnet"
     default:
       return "https://api.thegraph.com/samepant/zodiac-roles-mod-mainnet"
   }
