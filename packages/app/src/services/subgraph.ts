@@ -36,7 +36,7 @@ const getUrl = (network?: Network) => {
     case Network.LINEA_GOERLI:
       return "https://graph-query.goerli.linea.build/subgraphs/name/linea-safe/zodiac-roles-mod-linea-goerli"
     case Network.PLASMA_TESNET:
-      return "https://api.goldsky.com/api/public/project_cltg8htcp35aw01xn43dqhxmv/subgraphs/zodiac-modifier-roles-plasma-testnet/v1.0.0/gn"
+      return "https://api.goldsky.com/api/public/project_cltg8htcp35aw01xn43dqhxmv/subgraphs/zodiac-modifier-roles-plasma/v1.0.0/gn"
     case Network.PLASMA:
       return "https://graph-json-rpc.swap.w3us.site:8000/subgraphs/name/zodiac-modifier-roles-plasma"
     case Network.ZETACHAIN_TESTNET:
