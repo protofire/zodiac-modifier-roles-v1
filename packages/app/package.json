@@ -48,14 +48,13 @@
     "prettier": "^2.5.1",
     "react-scripts": "4.0.3",
     "typechain": "^7.0.0",
-    "typescript": "~4.4.4",
-    "tsx": "^4.19.2"
+    "typescript": "~4.4.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:chains": "tsx --test src/chains/*.nodetest.ts",
+    "test:chains": "npx --yes tsx@^4 --test src/chains/*.nodetest.ts",
     "eject": "react-scripts eject",
     "build:types": "typechain --target ethers-v5 --out-dir ./src/contracts/type ./contracts/abi/*.json",
     "getabi:permissions": "cp ../evm/build/artifacts/contracts/Permissions.sol/Permissions.json ./contracts/abi/Permissions.json",
