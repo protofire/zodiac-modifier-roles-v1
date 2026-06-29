@@ -5,8 +5,8 @@
 // Implemented as a factory so it can be driven with injected fetch/storage/clock in
 // tests (see registryStore.nodetest.ts); the app wires a browser-backed singleton in
 // registry.ts.
-import { toAppChain } from './deriveChain.ts'
-import type { AppChain, RegistryChainRaw } from './deriveChain.ts'
+import { toAppChain } from './deriveChain'
+import type { AppChain, RegistryChainRaw } from './deriveChain'
 
 export type RegistrySource = 'uninitialized' | 'registry' | 'cache' | 'fallback'
 

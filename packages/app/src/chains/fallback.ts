@@ -1,5 +1,5 @@
-import type { AppChain } from './deriveChain.ts'
-import { deriveSafeUrl, deriveVerifyContractUrl } from './deriveChain.ts'
+import type { AppChain } from './deriveChain'
+import { deriveSafeUrl, deriveVerifyContractUrl } from './deriveChain'
 
 // Manual exceptions only — chains the Chain Registry does not (yet) carry. The registry
 // always wins (`registry[id] ?? cache[id] ?? FALLBACK[id]`); an entry here is deleted
