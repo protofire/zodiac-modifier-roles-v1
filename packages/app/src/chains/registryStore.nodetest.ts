@@ -1,8 +1,8 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { createRegistryStore } from './registryStore.ts'
-import type { RegistryChainRaw } from './deriveChain.ts'
-import type { AppChain } from './deriveChain.ts'
+import { createRegistryStore } from './registryStore'
+import type { RegistryChainRaw } from './deriveChain'
+import type { AppChain } from './deriveChain'
 
 const raw = (chainId: string, shortName: string, extra: Partial<RegistryChainRaw> = {}): RegistryChainRaw => ({
   chainId,

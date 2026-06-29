@@ -9,8 +9,8 @@ import {
   deriveVerifyContractUrl,
   normalizeTransactionService,
   toAppChain,
-} from './deriveChain.ts'
-import type { RegistryChainRaw } from './deriveChain.ts'
+} from './deriveChain'
+import type { RegistryChainRaw } from './deriveChain'
 
 const rawMainnet: RegistryChainRaw = {
   chainId: '1',
