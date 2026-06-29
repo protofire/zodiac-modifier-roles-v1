@@ -1,4 +1,4 @@
-import CHAINS from "../data/chains.json"
+import { getRegistryChain } from "../chains/registry"
 
 export enum Network {
   MAINNET = 1,
@@ -69,42 +69,26 @@ interface NetworkConfig {
   }[]
 }
 
-const INFURA_KEY = process.env.REACT_APP_INFURA_KEY
-export const NETWORK_INFURA_ID: Record<Network, string | undefined> = {
-  [Network.MAINNET]: INFURA_KEY,
-  [Network.GOERLI]: INFURA_KEY,
-  [Network.SEPOLIA]: INFURA_KEY,
-  [Network.OPTIMISM]: INFURA_KEY,
-  [Network.BINANCE]: INFURA_KEY,
-  [Network.GNOSIS]: INFURA_KEY,
-  [Network.POLYGON]: INFURA_KEY,
-  [Network.EWT]: INFURA_KEY,
-  [Network.ARBITRUM]: INFURA_KEY,
-  [Network.AVALANCHE]: INFURA_KEY,
-  [Network.VOLTA]: INFURA_KEY,
-  [Network.AURORA]: INFURA_KEY,
-  [Network.OPTIMISM_ON_GNOSIS]: INFURA_KEY,
-  [Network.LINEA_GOERLI]: INFURA_KEY,
-  [Network.LINEA]: INFURA_KEY,
-  [Network.PLASMA_TESNET]: INFURA_KEY,
-  [Network.PLASMA]: INFURA_KEY,
-  [Network.ZETACHAIN_TESTNET]: INFURA_KEY,
-  [Network.ZETACHAIN]: INFURA_KEY,
-  [Network.FLOW_EVM_MAINNET]: undefined, // network is not supported by Infura
-  [Network.FLOW_EVM_TESTNET]: undefined, // network is not supported by Infura
-  [Network.SHAPE]: undefined, // network is not supported by Infura
-  [Network.SHAPE_TESTNET]: undefined, // network is not supported by Infura
-}
-
 export function getNetworkRPC(network: Network) {
-  const config = getNetwork(network)
-  const infura = NETWORK_INFURA_ID[network]
-  if (config && infura) {
-    // eslint-disable-next-line no-template-curly-in-string
-    return config.rpc[0].replace("${INFURA_API_KEY}", infura)
-  }
+  const rpc = getRegistryChain(network)?.rpc
+  return rpc || undefined
 }
 
 export function getNetwork(network: Network): NetworkConfig {
-  return CHAINS[network]
+  const chain = getRegistryChain(network)
+  return {
+    name: chain?.name ?? "",
+    chainId: network,
+    shortName: chain?.shortName ?? "",
+    rpc: chain?.rpc ? [chain.rpc] : [],
+    infoURL: "",
+    nativeCurrency: {
+      name: chain?.nativeAsset.symbol ?? "",
+      symbol: chain?.nativeAsset.symbol ?? "",
+      decimals: chain?.nativeAsset.decimals ?? 18,
+    },
+    explorers: chain?.explorer
+      ? [{ name: chain.explorer.name, url: chain.explorer.url, standard: "EIP3091" }]
+      : [],
+  }
 }

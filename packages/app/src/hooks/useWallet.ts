@@ -103,7 +103,10 @@ export const useWallet = () => {
   }
 
   useEffect(() => {
+    // RPC is registry-sourced and may be absent; skip the read provider rather than
+    // passing undefined (ethers silently defaults to localhost). Injected provider remains.
     const rpcUrl = getNetworkRPC(chainId)
+    if (!rpcUrl) return
     const provider = new ethers.providers.StaticJsonRpcProvider(rpcUrl, chainId)
     setProvider(provider)
   }, [chainId])

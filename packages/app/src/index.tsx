@@ -8,6 +8,7 @@ import App from "./components/App"
 import { RolesGlobalStyles } from "./theme/RolesGlobalStyles"
 import { Provider as ReduxProvider } from "react-redux"
 import { REDUX_STORE } from "./store"
+import { initRegistry } from "./chains/registry"
 
 const Main = () => {
   return (
@@ -23,9 +24,12 @@ const Main = () => {
   )
 }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Main />
-  </React.StrictMode>,
-  document.getElementById("root"),
-)
+// Seed chain metadata before first render. initRegistry never throws; render regardless.
+initRegistry().finally(() => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <Main />
+    </React.StrictMode>,
+    document.getElementById("root"),
+  )
+})

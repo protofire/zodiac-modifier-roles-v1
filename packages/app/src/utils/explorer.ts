@@ -1,101 +1,19 @@
 import { Explorer, ExplorerConfig } from "../services/explorer"
 import { getNetworkRPC, Network } from "./networks"
+import { getRegistryChain } from "../chains/registry"
 import memoize from "lodash.memoize"
 import { ethers } from "ethers"
 
-const ETHERSCAN_KEY = process.env.REACT_APP_ETHERSCAN_KEY as string
-const GNOSISSCAN_KEY = process.env.REACT_APP_GNOSISSCAN_KEY as string
-const POLYGONSCAN_KEY = process.env.REACT_APP_POLYGONSCAN_KEY as string
-const ARBISCAN_KEY = process.env.REACT_APP_ARBISCAN_KEY as string
-const BSCSCAN_KEY = process.env.REACT_APP_BSCSCAN_KEY as string
-const OPTIMISTICSCAN_KEY = process.env.REACT_APP_OPTIMISTICSCAN_KEY as string
-const SNOWTRACE_KEY = process.env.REACT_APP_SNOWTRACE_KEY as string
-
-const explorerConfig: Record<Network, ExplorerConfig> = {
-  [Network.MAINNET]: {
-    apiUrl: "https://api.etherscan.io/api",
-    apiKey: ETHERSCAN_KEY,
-  },
-  [Network.GOERLI]: {
-    apiUrl: "https://api-goerli.etherscan.io/api",
-    apiKey: ETHERSCAN_KEY,
-  },
-  [Network.SEPOLIA]: {
-    apiUrl: "https://api-sepolia.etherscan.io/api",
-    apiKey: ETHERSCAN_KEY,
-  },
-  [Network.OPTIMISM_ON_GNOSIS]: {
-    apiUrl: "https://blockscout.com/xdai/optimism/",
-  },
-  [Network.POLYGON]: {
-    apiUrl: "https://api.polygonscan.com/api",
-    apiKey: POLYGONSCAN_KEY,
-  },
-  [Network.ARBITRUM]: {
-    apiUrl: "https://api.arbiscan.io/api",
-    apiKey: ARBISCAN_KEY,
-  },
-  [Network.GNOSIS]: {
-    apiUrl: "https://api.gnosisscan.io/api",
-    apiKey: GNOSISSCAN_KEY,
-  },
-  [Network.BINANCE]: {
-    apiUrl: "https://api.bscscan.com/api",
-    apiKey: BSCSCAN_KEY,
-  },
-  [Network.OPTIMISM]: {
-    apiUrl: "https://api-optimistic.etherscan.io/api",
-    apiKey: OPTIMISTICSCAN_KEY,
-  },
-  [Network.EWT]: {
-    apiUrl: "https://explorer.energyweb.org/api",
-  },
-  [Network.VOLTA]: {
-    apiUrl: "https://volta-explorer.energyweb.org/api",
-  },
-  [Network.AVALANCHE]: {
-    apiUrl: "https://api.snowtrace.io/api",
-    apiKey: SNOWTRACE_KEY,
-  },
-  [Network.AURORA]: {
-    apiUrl: "https://explorer.mainnet.aurora.dev/api",
-  },
-  [Network.LINEA_GOERLI]: {
-    apiUrl: "https://api-testnet.lineascan.build/api",
-    apiKey: process.env.REACT_APP_LINEASCAN_KEY ?? "",
-  },
-  [Network.LINEA]: {
-    apiUrl: "https://api.lineascan.build/api",
-    apiKey: process.env.REACT_APP_LINEASCAN_KEY ?? "",
-  },
-  [Network.PLASMA_TESNET]: {
-    apiUrl: "https://api.routescan.io/v2/network/testnet/evm/9746_5/etherscan/api",
-  },
-  [Network.PLASMA]: {
-    apiUrl: "https://api.routescan.io/v2/network/mainnet/evm/9745/etherscan/api",
-  },
-  [Network.ZETACHAIN_TESTNET]: {
-    apiUrl: "https://testnet.zetascan.com/api",
-  },
-  [Network.ZETACHAIN]: {
-    apiUrl: "https://zetascan.com/api",
-  },
-  [Network.FLOW_EVM_MAINNET]: {
-    apiUrl: "https://evm.flowscan.io/api",
-  },
-  [Network.FLOW_EVM_TESTNET]: {
-    apiUrl: "https://evm-testnet.flowscan.io/api",
-  },
-  [Network.SHAPE]: {
-    apiUrl: "https://shapescan.xyz/api",
-  },
-  [Network.SHAPE_TESTNET]: {
-    apiUrl: "https://explorer-sepolia.shape.network/api",
-  },
-}
+// Roles divergence: a SINGLE explorer API key for every chain (the registry serves an
+// Etherscan-V2 base; the V2 endpoint accepts one key + a chainid query param). The former
+// per-chain *SCAN key map is gone.
+const EXPLORER_API_KEY = process.env.REACT_APP_EXPLORER_API_KEY as string
 
 export const getExplorer = memoize((network: Network) => {
-  const config = explorerConfig[network]
+  const config: ExplorerConfig = {
+    apiUrl: getRegistryChain(network)?.explorer.apiUrl ?? "",
+    apiKey: EXPLORER_API_KEY,
+  }
   const rpcUrl = getNetworkRPC(network)
   const provider = new ethers.providers.StaticJsonRpcProvider(rpcUrl, network)
   return new Explorer(config, provider)
