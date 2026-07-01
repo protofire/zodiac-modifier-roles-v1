@@ -21,11 +21,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const networkConfigs = NETWORKS.map(getNetwork)
-
 export const ChainPicker = () => {
   const classes = useStyles()
   const dispatch = useRootDispatch()
+  const networkConfigs = NETWORKS.map(getNetwork)
 
   const chainId = useRootSelector(getChainId)
   const disabled = useRootSelector(getNetworkPickerDisabled)

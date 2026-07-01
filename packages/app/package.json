@@ -54,6 +54,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:chains": "npx --yes tsx@^4 --test src/chains/*.nodetest.ts",
     "eject": "react-scripts eject",
     "build:types": "typechain --target ethers-v5 --out-dir ./src/contracts/type ./contracts/abi/*.json",
     "getabi:permissions": "cp ../evm/build/artifacts/contracts/Permissions.sol/Permissions.json ./contracts/abi/Permissions.json",

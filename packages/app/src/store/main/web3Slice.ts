@@ -1,13 +1,14 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
 import { Web3State } from "./models"
 import { BigNumber, ethers } from "ethers"
-import { getNetwork, Network } from "../../utils/networks"
+import { Network } from "../../utils/networks"
 
 const ethereum = (window as any).ethereum
 let initialChainId
 try {
   const chainId: BigNumber | undefined = ethereum && ethereum.chainId && ethers.BigNumber.from(ethereum.chainId)
-  if (chainId && getNetwork(chainId.toNumber())) {
+  // No gate: adopt whatever chain the wallet reports. If the registry carries it, it works.
+  if (chainId) {
     initialChainId = chainId.toNumber()
   }
 } catch (err) {}
