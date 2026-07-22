@@ -24,6 +24,8 @@ export enum Network {
   FLOW_EVM_TESTNET = 545,
   SHAPE = 360,
   SHAPE_TESTNET = 11011,
+  SEI = 1329,
+  SEI_TESTNET = 1328,
 }
 
 export const NETWORKS = [
@@ -49,6 +51,8 @@ export const NETWORKS = [
   Network.FLOW_EVM_TESTNET,
   Network.SHAPE,
   Network.SHAPE_TESTNET,
+  Network.SEI,
+  Network.SEI_TESTNET,
 ]
 
 interface NetworkConfig {
