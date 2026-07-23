@@ -53,5 +53,8 @@
   "devDependencies": {
     "mustache": "^4.2.0",
     "prettier": "^2.5.1"
+  },
+  "resolutions": {
+    "secp256k1": "4.0.3"
   }
 }
