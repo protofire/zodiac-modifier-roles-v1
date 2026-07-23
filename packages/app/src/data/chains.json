@@ -1,0 +1,580 @@
+{
+  "1": {
+    "name": "Ethereum Mainnet",
+    "chainId": 1,
+    "shortName": "eth",
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://mainnet.infura.io/v3/${INFURA_API_KEY}",
+      "wss://mainnet.infura.io/ws/v3/${INFURA_API_KEY}",
+      "https://api.mycryptoapi.com/eth",
+      "https://cloudflare-eth.com"
+    ],
+    "explorers": [
+      {
+        "name": "etherscan",
+        "url": "https://etherscan.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://ethereum.org"
+  },
+  "5": {
+    "name": "Görli",
+    "chainId": 5,
+    "shortName": "gor",
+    "nativeCurrency": {
+      "name": "Görli Ether",
+      "symbol": "GOR",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://goerli.infura.io/v3/${INFURA_API_KEY}",
+      "wss://goerli.infura.io/v3/${INFURA_API_KEY}",
+      "https://rpc.goerli.mudit.blog/"
+    ],
+    "explorers": [
+      {
+        "name": "etherscan-goerli",
+        "url": "https://goerli.etherscan.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://goerli.net/#about"
+  },
+  "11155111": {
+    "name": "Sepolia",
+    "chainId": 11155111,
+    "shortName": "sep",
+    "nativeCurrency": {
+      "name": "Sepolia Ether",
+      "symbol": "SEP",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://sepolia.infura.io/v3/${INFURA_API_KEY}",
+      "wss://sepolia.infura.io/v3/${INFURA_API_KEY}",
+      "https://rpc2.sepolia.org"
+    ],
+    "explorers": [
+      {
+        "name": "etherscan-sepolia",
+        "url": "https://sepolia.etherscan.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "http://sepolia.org"
+  },
+  "10": {
+    "name": "Optimism",
+    "chainId": 10,
+    "shortName": "oeth",
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "OETH",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://mainnet.optimism.io/"
+    ],
+    "explorers": [
+      {
+        "name": "etherscan",
+        "url": "https://optimistic.etherscan.io",
+        "standard": "none"
+      }
+    ],
+    "infoURL": "https://optimism.io"
+  },
+  "56": {
+    "name": "Binance Smart Chain Mainnet",
+    "chainId": 56,
+    "shortName": "bnb",
+    "nativeCurrency": {
+      "name": "Binance Chain Native Token",
+      "symbol": "BNB",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://bsc-dataseed1.binance.org",
+      "https://bsc-dataseed2.binance.org",
+      "wss://bsc-ws-node.nariox.org"
+    ],
+    "explorers": [
+      {
+        "name": "bscscan",
+        "url": "https://bscscan.com",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://www.binance.org"
+  },
+  "100": {
+    "name": "Gnosis Chain",
+    "chainId": 100,
+    "shortName": "gnosis",
+    "chain": "GNOSIS",
+    "network": "mainnet",
+    "networkId": 100,
+    "nativeCurrency": {
+      "name": "xDAI",
+      "symbol": "xDAI",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://rpc.gnosischain.com",
+      "https://rpc.gnosis.gateway.fm",
+      "wss://rpc.gnosischain.com/wss"
+    ],
+    "explorers": [
+      {
+        "name": "gnosisscan",
+        "url": "https:/gnosisscan.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://gnosis.io"
+  },
+  "137": {
+    "name": "Polygon Mainnet",
+    "chainId": 137,
+    "shortName": "MATIC",
+    "nativeCurrency": {
+      "name": "MATIC",
+      "symbol": "MATIC",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://polygon-rpc.com/",
+      "https://rpc-mainnet.matic.network",
+      "https://matic-mainnet.chainstacklabs.com",
+      "https://rpc-mainnet.maticvigil.com",
+      "https://rpc-mainnet.matic.quiknode.pro",
+      "https://matic-mainnet-full-rpc.bwarelabs.com"
+    ],
+    "explorers": [
+      {
+        "name": "polygonscan",
+        "url": "https://polygonscan.com/",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://polygon.technology/"
+  },
+  "246": {
+    "name": "Energy Web Chain",
+    "chainId": 246,
+    "shortName": "ewt",
+    "nativeCurrency": {
+      "name": "Energy Web Token",
+      "symbol": "EWT",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://rpc.energyweb.org",
+      "wss://rpc.energyweb.org/ws"
+    ],
+    "explorers": [
+      {
+        "name": "blockscout",
+        "url": "https://explorer.energyweb.org",
+        "standard": "none"
+      }
+    ],
+    "infoURL": "https://energyweb.org"
+  },
+  "300": {
+    "name": "Optimism on Gnosis Chain",
+    "chainId": 300,
+    "shortName": "ogc",
+    "nativeCurrency": {
+      "name": "xDAI",
+      "symbol": "xDAI",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://optimism.gnosischain.com",
+      "wss://optimism.gnosischain.com/wss"
+    ],
+    "explorers": [
+      {
+        "name": "blockscout",
+        "url": "https://blockscout.com/xdai/optimism",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://www.gnosischain.com/"
+  },
+  "360": {
+    "name": "Shape",
+    "chainId": 360,
+    "shortName": "shape",
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://mainnet.shape.network",
+      "https://shape-mainnet.g.alchemy.com/public"
+    ],
+    "explorers": [
+      {
+        "name": "shapescan",
+        "url": "https://shapescan.xyz",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://shape.network"
+  },
+  "7000": {
+    "name": "ZetaChain",
+    "chainId": 7000,
+    "shortName": "zetachain-mainnet",
+    "nativeCurrency": {
+      "name": "ZETA",
+      "symbol": "ZETA",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://zetachain-evm.blockpi.network/v1/rpc/public",
+      "https://zetachain-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}"
+    ],
+    "explorers": [
+      {
+        "name": "blockscout",
+        "url": "https://zetascan.com",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://zetachain.com"
+  },
+  "7001": {
+    "name": "ZetaChain Testnet",
+    "chainId": 7001,
+    "shortName": "zetachain-testnet",
+    "nativeCurrency": {
+      "name": "ZETA",
+      "symbol": "ZETA",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://zetachain-athens-evm.blockpi.network/v1/rpc/public",
+      "https://zetachain-testnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}"
+    ],
+    "explorers": [
+      {
+        "name": "blockscout",
+        "url": "https://testnet.zetascan.com",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://zetachain.com"
+  },
+  "9745": {
+    "name": "Plasma",
+    "chainId": 9745,
+    "shortName": "plasma",
+    "nativeCurrency": {
+      "name": "XPL",
+      "symbol": "XPL",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://plasma-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}",
+      "https://rpc.plasma.to"
+    ],
+    "explorers": [
+      {
+        "name": "Plasmascan",
+        "url": "https://plasmascan.to/",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://www.plasma.to/"
+  },
+  "9746": {
+    "name": "Plasma Testnet",
+    "chainId": 9746,
+    "shortName": "plasma-testnet",
+    "nativeCurrency": {
+      "name": "XPL",
+      "symbol": "XPL",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://plasma-testnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}",
+      "https://testnet-rpc.plasma.to"
+    ],
+    "explorers": [
+      {
+        "name": "Plasmascan",
+        "url": "https://testnet.plasmascan.to",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://www.plasma.to/"
+  },
+  "747": {
+    "name": "Flow EVM Mainnet",
+    "chainId": 747,
+    "shortName": "flow-mainnet",
+    "nativeCurrency": {
+      "name": "FLOW",
+      "symbol": "FLOW",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://mainnet.evm.nodes.onflow.org",
+      "https://flow-mainnet.gateway.tatum.io"
+    ],
+    "explorers": [
+      {
+        "name": "FlowScan",
+        "url": "https://evm.flowscan.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://developers.flow.com/evm/about"
+  },
+  "545": {
+    "name": "Flow EVM Testnet",
+    "chainId": 545,
+    "shortName": "flow-testnet",
+    "nativeCurrency": {
+      "name": "FLOW",
+      "symbol": "FLOW",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://testnet.evm.nodes.onflow.org",
+      "https://flow-testnet.gateway.tatum.io"
+    ],
+    "explorers": [
+      {
+        "name": "FlowScan Testnet",
+        "url": "https://evm-testnet.flowscan.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://developers.flow.com/evm/about"
+  },
+  "1328": {
+    "name": "Sei Testnet",
+    "chainId": 1328,
+    "shortName": "sei-testnet",
+    "nativeCurrency": {
+      "name": "Sei",
+      "symbol": "SEI",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://evm-rpc-testnet.sei-apis.com"
+    ],
+    "explorers": [
+      {
+        "name": "SeiScan",
+        "url": "https://testnet.seiscan.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://www.sei.io"
+  },
+  "1329": {
+    "name": "Sei",
+    "chainId": 1329,
+    "shortName": "sei",
+    "nativeCurrency": {
+      "name": "Sei",
+      "symbol": "SEI",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://evm-rpc.sei-apis.com"
+    ],
+    "explorers": [
+      {
+        "name": "SeiScan",
+        "url": "https://seiscan.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://www.sei.io"
+  },
+  "11011": {
+    "name": "Shape Sepolia Testnet",
+    "chainId": 11011,
+    "shortName": "shapesep",
+    "nativeCurrency": {
+      "name": "Sepolia Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://sepolia.shape.network/"
+    ],
+    "explorers": [
+      {
+        "name": "blockscout",
+        "url": "https://explorer-sepolia.shape.network",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://shape.network"
+  },
+  "42161": {
+    "name": "Arbitrum One",
+    "chainId": 42161,
+    "shortName": "arb1",
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "AETH",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://arbitrum-mainnet.infura.io/v3/${INFURA_API_KEY}",
+      "https://arb-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}",
+      "https://arb1.arbitrum.io/rpc",
+      "wss://arb1.arbitrum.io/ws"
+    ],
+    "explorers": [
+      {
+        "name": "Arbiscan",
+        "url": "https://arbiscan.io",
+        "standard": "EIP3091"
+      },
+      {
+        "name": "Arbitrum Explorer",
+        "url": "https://explorer.arbitrum.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://arbitrum.io"
+  },
+  "43114": {
+    "name": "Avalanche Mainnet",
+    "chainId": 43114,
+    "shortName": "Avalanche",
+    "nativeCurrency": {
+      "name": "Avalanche",
+      "symbol": "AVAX",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://api.avax.network/ext/bc/C/rpc"
+    ],
+    "explorers": [
+      {
+        "name": "snowtrace",
+        "url": "https://snowtrace.io",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://www.avax.network/"
+  },
+  "59140": {
+    "name": "Linea Testnet",
+    "chainId": 59140,
+    "shortName": "linea-testnet",
+    "nativeCurrency": {
+      "name": "Linea Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "explorers": [
+      {
+        "name": "Etherscan",
+        "url": "https://goerli.lineascan.build",
+        "standard": "EIP3091"
+      },
+      {
+        "name": "Blockscout",
+        "url": "https://explorer.goerli.linea.build",
+        "standard": "EIP3091"
+      }
+    ],
+    "rpc": [
+      "https://rpc.goerli.linea.build",
+      "wss://rpc.goerli.linea.build",
+      "https://linea-goerli.infura.io/v3/${INFURA_API_KEY}",
+      "wss://linea-goerli.infura.io/v3/${INFURA_API_KEY}"
+    ],
+    "infoURL": "https://linea.build"
+  },
+  "59144": {
+    "name": "Linea",
+    "chainId": 59144,
+    "shortName": "linea",
+    "nativeCurrency": {
+      "name": "Linea Ether",
+      "symbol": "ETH",
+      "decimals": 18
+    },
+    "explorers": [
+      {
+        "name": "Etherscan",
+        "url": "https://lineascan.build",
+        "standard": "EIP3091"
+      },
+      {
+        "name": "Blockscout",
+        "url": "https://explorer.linea.build",
+        "standard": "EIP3091"
+      }
+    ],
+    "rpc": [
+      "https://rpc.linea.build",
+      "wss://rpc.linea.build",
+      "https://linea-mainnet.infura.io/v3/${INFURA_API_KEY}",
+      "wss://linea-mainnet.infura.io/ws/v3/${INFURA_API_KEY}"
+    ],
+    "infoURL": "https://linea.build"
+  },
+  "73799": {
+    "name": "Energy Web Volta Testnet",
+    "chainId": 73799,
+    "shortName": "vt",
+    "nativeCurrency": {
+      "name": "Volta Token",
+      "symbol": "VT",
+      "decimals": 18
+    },
+    "explorers": [
+      {
+        "name": "blockscout",
+        "url": "https://volta-explorer.energyweb.org/",
+        "standard": "none"
+      }
+    ],
+    "rpc": [
+      "https://volta-rpc.energyweb.org",
+      "wss://volta-rpc.energyweb.org/ws"
+    ],
+    "infoURL": "https://energyweb.org"
+  },
+  "1313161554": {
+    "name": "Aurora MainNet",
+    "chainId": 1313161554,
+    "shortName": "aurora",
+    "nativeCurrency": {
+      "name": "Ether",
+      "symbol": "aETH",
+      "decimals": 18
+    },
+    "rpc": [
+      "https://mainnet.aurora.dev"
+    ],
+    "explorers": [
+      {
+        "name": "explorer.aurora.dev",
+        "url": "https://explorer.mainnet.aurora.dev",
+        "standard": "EIP3091"
+      }
+    ],
+    "infoURL": "https://aurora.dev"
+  }
+}

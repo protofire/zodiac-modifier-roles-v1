@@ -36,7 +36,15 @@
     "prepare:zetachain": "mustache network_configs/zetachain.json subgraph.template.yaml > subgraph.yaml",
     "prepare:zetachain-testnet": "mustache network_configs/zetachain-testnet.json subgraph.template.yaml > subgraph.yaml",
     "prepare:flow-mainnet": "mustache network_configs/flow-mainnet.json subgraph.template.yaml > subgraph.yaml",
-    "prepare:flow-testnet": "mustache network_configs/flow-testnet.json subgraph.template.yaml > subgraph.yaml"
+    "prepare:flow-testnet": "mustache network_configs/flow-testnet.json subgraph.template.yaml > subgraph.yaml",
+    "prepare:shape": "mustache network_configs/shape.json subgraph.template.yaml > subgraph.yaml",
+    "prepare:shape-testnet": "mustache network_configs/shape-testnet.json subgraph.template.yaml > subgraph.yaml",
+    "prepare:sei": "mustache network_configs/sei.json subgraph.template.yaml > subgraph.yaml",
+    "prepare:sei-testnet": "mustache network_configs/sei-testnet.json subgraph.template.yaml > subgraph.yaml",
+    "deploy:shape-goldsky": "yarn prepare:shape && yarn codegen && yarn graph build && goldsky subgraph deploy zodiac-modifier-roles-shape/v1.0.0 --path .",
+    "deploy:shape-sepolia-goldsky": "yarn prepare:shape-sepolia && yarn codegen && yarn graph build && goldsky subgraph deploy zodiac-modifier-roles-shape-sepolia/v1.0.0 --path .",
+    "deploy:sei": "yarn prepare:sei && bash -c 'source .env || true && npx --yes @graphprotocol/graph-cli@0.98.1 deploy --node https://api.studio.thegraph.com/deploy/ --version-label v1.0.0 $STUDIO_SUBGRAPH__SEI'",
+    "deploy:sei-testnet": "yarn prepare:sei-testnet && bash -c 'source .env || true && npx --yes @graphprotocol/graph-cli@0.98.1 deploy --node https://api.studio.thegraph.com/deploy/ --version-label v1.0.0 $STUDIO_SUBGRAPH__SEI_TESTNET'"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "^0.56.0",
@@ -45,5 +53,8 @@
   "devDependencies": {
     "mustache": "^4.2.0",
     "prettier": "^2.5.1"
+  },
+  "resolutions": {
+    "secp256k1": "4.0.3"
   }
 }

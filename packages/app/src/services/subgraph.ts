@@ -51,6 +51,10 @@ const getUrl = (network?: Network) => {
       return "https://graph-json-rpc.swap.w3us.site:8000/subgraphs/name/zodiac-modifier-roles-shape"
     case Network.SHAPE_TESTNET:
       return "https://graph-json-rpc.swap.w3us.site:8000/subgraphs/name/zodiac-modifier-roles-shape-testnet"
+    case Network.SEI:
+      return "https://api.studio.thegraph.com/query/1756809/zodiac-roles-sei/v1.0.0"
+    case Network.SEI_TESTNET:
+      return "https://api.studio.thegraph.com/query/1756809/zodiac-roles-sei-testnet/v1.0.0"
     default:
       return "https://api.thegraph.com/samepant/zodiac-roles-mod-mainnet"
   }
